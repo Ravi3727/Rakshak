@@ -1,3 +1,15 @@
+
+// // import { Link } from 'react-router-dom'
+// function HeroSection() {
+//   return (
+//     <div className='min-w-[100vw] min-h-[100vh] flex flex-col justify-between'>
+//     <NavBar/>
+//     <div className=' text-blue-400'></div>
+//     <Footer/>
+//     </div>
+//   )
+// }
+
 import React, { useState } from 'react';
 
 const HeroSection = () => {
@@ -114,5 +126,6 @@ const HeroSection = () => {
     </div>
   );
 };
+
 
 export default HeroSection;
