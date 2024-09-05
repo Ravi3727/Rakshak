@@ -24,7 +24,7 @@ const UserProfile = () => {
   const helpedPeople = generateRandomHelpedPeople();
 
   return (
-    <div className="p-6 max-w-4xl mt-16 mx-auto rounded-lg shadow-md" style={{ backgroundColor: 'rgb(31 41 55)' }}>
+    <div className="p-6 max-w-4xl mt-16 mx-auto rounded-lg shadow-md mb-12 " style={{ backgroundColor: 'rgb(31 41 55)' }}>
       {/* Profile Header */}
       <div className="flex items-center space-x-4">
         <div className="w-24 h-24 rounded-full flex items-center bg-gray-200 justify-center text-4xl font-bold text-gray-500">

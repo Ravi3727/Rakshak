@@ -1,9 +1,14 @@
-import React from 'react'
 
-function login() {
+import LoginForm from "./LoginForm";
+
+function Login () {
   return (
-    <div>login</div>
-  )
-}
+    <div className="min-h-screen bg-transparent">
+      <div className="mx-auto my-auto z-10">
+        <LoginForm />
+      </div>
+    </div>
+  );
+};
 
-export default login
+export default Login;

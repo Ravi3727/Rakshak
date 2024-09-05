@@ -50,7 +50,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="p-6  mx-auto  rounded-lg shadow-md">
+    <div className="p-6  mx-auto  rounded-xl shadow-md ">
       {/* Strong Motivational Line */}
       <div className="text-center mb-6">
         <h1 className="text-4xl font-bold text-orange-500 leading-16">Your voice is your power. Stand strong, stay safe, and never be afraid to ask for help!</h1>
@@ -118,7 +118,7 @@ const HeroSection = () => {
               <input type="text" className="mt-1 p-2 block w-full rounded-md border-gray-800 border-2 shadow-sm" />
             </div>
           </div>
-          <button className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition">
+          <button className="px-4 py-2 w-28 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition">
             Send
           </button>
         </div>

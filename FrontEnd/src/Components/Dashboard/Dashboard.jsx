@@ -5,7 +5,7 @@ import 'chart.js/auto';
 const Dashboard = () => {
   
   const crimeData = {
-    totalCases: 350,
+    totalCases: 600,
     zones: ['Zone 1', 'Zone 2', 'Zone 3', 'Zone 4', 'Zone 5'],
     cases: [150, 80, 60, 30, 20],
   };
@@ -58,9 +58,9 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="p-6 space-y-6">
+    <div className="p-6 space-y-6 rounded-xl">
       {/* Live Count of Crime Cases */}
-      <div className={`p-4 rounded-lg ${color} text-white`}>
+      <div className={`p-4 rounded-lg ${color} text-white text-center items-center`}>
         <h2 className="text-xl font-bold">Live Count of Crime Cases</h2>
         <p className="text-2xl">{liveCount}</p>
       </div>
@@ -70,7 +70,7 @@ const Dashboard = () => {
 
         
       {/* Top 10 Cities with More Crimes */}
-      <div className="p-4 bg-gray-100 rounded-lg">
+      <div className="p-4 bg-gray-300 rounded-lg">
         <h2 className="text-xl font-bold">Top 10 Cities with More Crimes (Last 1 Month)</h2>
         <ul className="list-disc pl-5 mt-2">
           {topCities.map((city, index) => (
@@ -80,7 +80,7 @@ const Dashboard = () => {
       </div>
 
       {/* Top 10 Cities with Minimum Crime Cases */}
-      <div className="p-4 bg-gray-100 rounded-lg">
+      <div className="p-4 bg-gray-300 rounded-lg ">
         <h2 className="text-xl font-bold">Top 10 Cities with Minimum Crime Cases</h2>
         <ul className="list-disc pl-5 mt-2">
           {leastCities.map((city, index) => (
