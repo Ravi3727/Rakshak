@@ -1,10 +1,9 @@
 import React from 'react'
-import loginImg from "../../assets/login.jpg";
+import signupImg from "../../assets/Signup.jpg";
 import { useForm } from 'react-hook-form';
-import { TextHighlighter } from "../Common/TextHighlighter";
 import { CiLogin } from "react-icons/ci";
 import { motion } from 'framer-motion';
-export const Login = () => {
+export const Signup = () => {
   const {
     register,
     handleSubmit,
@@ -14,6 +13,7 @@ export const Login = () => {
   function submitHandler(data){
     console.log(data);
     reset({
+      name : "",
       email : "",
       password:"",
     })
@@ -21,9 +21,23 @@ export const Login = () => {
   return (
       <div>
     <div className='flex flex-col lg:flex-row justify-between w-11/12 mx-auto my-auto h-full mt-2 items-start'>
-      <motion.img src={loginImg} whileInView={{x:[-200,0]}} transition={{duration:0.85,ease:"easeIn"}} alt='login' className=' self-center w-full lg:w-[45%] h-fit max-h-[550px] object-contain'/>
+      <motion.img src={signupImg} whileInView={{x:[-200,0]}} transition={{duration:0.85,ease:"easeIn"}} alt='login' className=' self-center w-full lg:w-[45%] h-fit max-h-[550px] object-contain'/>
       <motion.form whileInView={{x:[200,0]}} transition={{duration:0.85,ease:"easeIn"}} className='lg:w-[45%] mx-auto mt-16 flex flex-col gap-y-8 font-vietnam' onSubmit={handleSubmit(submitHandler)}>
-      <div className='mb-8 text-4xl text-center sm:text-5xl font-dmsans font-bold'>{"Login Page"}</div>
+      <div className='mb-8 text-4xl text-center sm:text-5xl font-dmsans font-bold'>{"Signup Page"}</div>
+        <div className='flex flex-col w-full'>
+          <div>Full Name : </div>
+          <input type="text" placeholder='Please Enter Your Full Name....' name='name'  className='bg-[#EDF2F8] h-[40px] placeholder:font-inter placeholder:font-normal w-full rounded-lg px-4 py-7 outline-none'
+            {
+              ...register("name",{
+                required:{value:true,message:"Please Enter Your Full Name"}
+              })
+            }
+          />
+          {
+            errors.name && 
+            <span className='mt-1 font-vietnam text-red-400 text-sm'>{errors.name.message}</span>
+          }
+          </div>
           <div className='flex flex-col w-full'>
           <div>Email Address: </div>
           <input type="email" placeholder='Please Enter Your Email Address....' name='email'  className='bg-[#EDF2F8] h-[40px] placeholder:font-inter placeholder:font-normal w-full rounded-lg px-4 py-7 outline-none'
@@ -49,10 +63,10 @@ export const Login = () => {
           />
           {
             errors.password && 
-            <span className='mt-1 font-vietnam text-red-400 text-sm'>{errors.password.message}</span>
+            <span className='mt-1 font-vietnam text-red-400  text-sm'>{errors.password.message}</span>
           }
           </div>
-          <button type='submit' className='bg-[#2430AF] flex items-center gap-x-2 mx-auto w-fit py-3 px-6 hover:scale-90 shadow-[0px_0px_10px_0px] shadow-blue-100 transition-all duration-200 text-white font-dmsans font-bold rounded-lg'>{"Login"}
+          <button type='submit' className='bg-[#2430AF] flex items-center gap-x-2 mx-auto w-fit py-3 px-6 hover:scale-90 shadow-[0px_0px_10px_0px] shadow-blue-100 transition-all duration-200 text-white font-dmsans font-bold rounded-lg'>{"Signup"}
           <span><CiLogin size={"20px"}/></span></button>
       </motion.form>
     </div>
