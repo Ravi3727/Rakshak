@@ -7,7 +7,7 @@ function Navbar() {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold">
-          <Link to="/">Empower.Me</Link>
+          <Link to="/">Rakshak</Link>
         </div>
 
         {/* Links */}
